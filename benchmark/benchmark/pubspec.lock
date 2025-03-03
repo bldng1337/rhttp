@@ -82,10 +82,10 @@ packages:
     dependency: transitive
     description:
       name: flutter_rust_bridge
-      sha256: fb9d3c9395eae3c71d4fe3ec343b9f30636c9988150c8bb33b60047549b34e3d
+      sha256: "3292ad6085552987b8b3b9a7e5805567f4013372d302736b702801acb001ee00"
       url: "https://pub.dev"
     source: hosted
-    version: "2.6.0"
+    version: "2.7.1"
   freezed_annotation:
     dependency: transitive
     description:
@@ -172,7 +172,7 @@ packages:
       path: "../../rhttp"
       relative: true
     source: path
-    version: "0.9.6"
+    version: "0.10.0"
   sky_engine:
     dependency: transitive
     description: flutter
