@@ -19,7 +19,7 @@ default-features = false
 features = [
     "charset",
     "http2",
-    # "http3",
+    "http3",
     "rustls-tls-webpki-roots",
     "stream",
     "multipart",

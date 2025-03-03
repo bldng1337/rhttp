@@ -265,11 +265,11 @@ pub async fn make_http_request_receive_stream(
 
     tokio::select! {
         _ = cancel_tokens.request_cancel_token.cancelled() => {
-            let _ = stream_sink.add_error(anyhow::anyhow!(error::STREAM_CANCEL_ERROR));
+            let _ = stream_sink.add_error(anyhow::anyhow!("STREAM_CANCEL_ERROR".to_string()));
             on_error(RhttpError::RhttpCancelError).await;
         },
         _ = cancel_tokens.client_cancel_token.cancelled() => {
-            let _ = stream_sink.add_error(anyhow::anyhow!(error::STREAM_CANCEL_ERROR));
+            let _ = stream_sink.add_error(anyhow::anyhow!("STREAM_CANCEL_ERROR".to_string()));
             on_error(RhttpError::RhttpCancelError).await;
         },
         _ = make_http_request_receive_stream_inner(

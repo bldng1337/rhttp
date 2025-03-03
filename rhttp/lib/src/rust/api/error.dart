@@ -11,12 +11,6 @@ part 'error.freezed.dart';
 
 // These function are ignored because they are on traits that is not defined in current crate (put an empty `#[frb]` on it to unignore): `clone`, `fmt`, `fmt`
 
-Str get streamCancelError =>
-    RustLib.instance.api.crateApiErrorStreamCancelError();
-
-// Rust type: RustOpaqueMoi<flutter_rust_bridge::for_generated::RustAutoOpaqueInner<str>>
-abstract class Str implements RustOpaqueInterface {}
-
 @freezed
 sealed class RhttpError with _$RhttpError implements FrbException {
   const RhttpError._();
